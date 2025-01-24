@@ -56,10 +56,17 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-path" -- Path completions
 	use "hrsh7th/cmp-cmdline" -- Cmdline completions
 	use "saadparwaiz1/cmp_luasnip" -- Snippet completions
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-nvim-lua"
 
 	-- Snippets
 	use "L3MON4D3/LuaSnip" -- Snippet engine
 	use "rafamadriz/friendly-snippets" -- A bunch of snippets to use
+
+	-- LSP
+	use "neovim/nvim-lspconfig" -- Enable LSP
+	use "williamboman/mason.nvim" -- Simple to use language server installer
+	use "williamboman/mason-lspconfig.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
