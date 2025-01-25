@@ -42,9 +42,12 @@ packer.init {
 -- Install plugins here
 return packer.startup(function(use)
 	-- Plugins - all GitHub repos
+	-- Dependencies
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from Vim in Neovim
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used in other plugins
+
+	-- General plugins
 	use "rstacruz/vim-closer" -- Auto close parentheses when enter is pressed
 
 	-- Colorschemes
@@ -67,6 +70,9 @@ return packer.startup(function(use)
 	use "neovim/nvim-lspconfig" -- Enable LSP
 	use "williamboman/mason.nvim" -- Simple to use language server installer
 	use "williamboman/mason-lspconfig.nvim"
+
+	-- Telescope
+	use "nvim-telescope/telescope.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
