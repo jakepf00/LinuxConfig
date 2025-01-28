@@ -53,6 +53,8 @@ return packer.startup(function(use)
 	use "nvim-telescope/telescope.nvim" -- Telescope
     use "nvim-tree/nvim-web-devicons"
     use "nvim-tree/nvim-tree.lua"
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
 
 	-- Colorschemes
 	use "folke/tokyonight.nvim"
