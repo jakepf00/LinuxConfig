@@ -49,6 +49,10 @@ return packer.startup(function(use)
 
 	-- General plugins
 	use "rstacruz/vim-closer" -- Auto close parentheses when enter is pressed
+    use "lewis6991/gitsigns.nvim" -- Git signs
+	use "nvim-telescope/telescope.nvim" -- Telescope
+    use "nvim-tree/nvim-web-devicons"
+    use "nvim-tree/nvim-tree.lua"
 
 	-- Colorschemes
 	use "folke/tokyonight.nvim"
@@ -71,9 +75,6 @@ return packer.startup(function(use)
 	use "williamboman/mason.nvim" -- Simple to use language server installer
 	use "williamboman/mason-lspconfig.nvim"
 
-	-- Telescope
-	use "nvim-telescope/telescope.nvim"
-
 	-- Treesitter
 	use {
 		"nvim-treesitter/nvim-treesitter",
@@ -82,9 +83,6 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	}
-
-    -- Git
-    use "lewis6991/gitsigns.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
