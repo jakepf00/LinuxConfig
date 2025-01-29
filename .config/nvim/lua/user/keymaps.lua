@@ -1,5 +1,3 @@
--- TODO: add descriptions to keymaps
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -35,10 +33,13 @@ keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Auto formatting
+-- Could improve this with null-ls
+keymap("n", "<leader>s", ":lua vim.lsp.buf.format()<CR>", opts) -- [s]tyle (f already taken by telescope)
 
 -- Insert --
 -- kj to exit
