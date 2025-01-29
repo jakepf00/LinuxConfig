@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
     use "nvim-lualine/lualine.nvim"
+    use "akinsho/toggleterm.nvim"
 
 	-- Colorschemes
 	use "folke/tokyonight.nvim"
